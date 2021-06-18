@@ -9,7 +9,7 @@
 
 
 ## 1.
-在控制器，自定义url访问错误时返回前端或api的错误
+在控制器，自定义 url访问错误时 返回前端或api的错误信息格式
 
 首先修改`.env`文件内容：`APP_DEBUG = false`
 
@@ -35,7 +35,7 @@
 
 ### 1.2 访问url中的控制器地址错误
 
-在`app\controller`下添加`Error.php`文件
+在`app\controller`下添加`Error.php`文件，控制器地址错误会自动执行Error.php文件
 
 ```php
 <?php
@@ -103,7 +103,6 @@ public function __call($name, $arguments)
     {
         return show(0,config("status.action_not_found"),null,404); // config("status.xxx")表示config/status文件
     }
-}
 ```
 输出：
 ```json
